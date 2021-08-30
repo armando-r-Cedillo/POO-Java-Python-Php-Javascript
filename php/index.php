@@ -7,44 +7,41 @@ require_once("./Paypal.php");
 require_once("./Cash.php");
 require_once("./User.php");
 require_once("./Driver.php");
-$uberTypeX= new UberX(12424,new Account(1,'armando','1234','armand@12.com','ksk1'),"abcd","aszv");
-
-echo $uberTypeX->printDataCarFromUser();
-
+require_once("./UberBlack.php");
+require_once("./UberVann.php");
 
 $card = new Card(12,1312393994012,1230199231,"12/12/22");
 $card2 = new Card(21,1391239193,912921919,31);
 echo "";
 echo $card->cvu;
-
-
+echo "\n";
+echo "\n";
 $paypal = new Paypal(1,"armand@gggmail.com");
 echo "";
 echo $paypal->email;
-
-
+echo "\n";
+echo "\n";
 $cash = new Cash(2);
 echo "";
-
 echo $cash->id;
-
+echo "\n";
+echo "\n";
 $user = new User(1,"armando","12ff","arm@gm.com","12kd1");
-
 echo $user->id . " " . $user->name;
-
-$driver = new Driver(1,"Karla","1f1aa","ckar@gm.com","13fas");
-
+echo "\n";
+echo "\n";
+$driver = new Driver(2,"Karla","Document-1f1aa","ckar@gm.com","13fas");
 echo $driver->id. " ". " ". $driver->name;
-
-/*
-$account = new Account("Armando","1203DD");
-echo "Imprimiendo directo los datos del objeto account " .$account->name;
-
-$car = new Car("13DA",$account);
-echo $car->driver->name;
-$car->printUserInfo();
-
-$car2 = new Car("13DA",new Account("Lorena","LRC1241"));
-echo " Imprimiendo los datos del objeto account mediante el objeto Car2 " . $car->driver->name;
-$car2->printUserInfo();
-*/
+echo "\n";
+echo "\n";
+$uberTypeX= new UberX(12424,new Account(1,'Armando','Document-A234',
+'armand@mail.com','passksk1'),1,"Honda","Civic 2019");
+$uberTypeX->printDataCar();
+echo "\n";
+echo "\n";
+$uberTypeBlack= new UberBlack(9281,$driver,4,['golden',1],['piel']);
+$uberTypeBlack->printUberBlack();
+echo "\n";
+echo "\n";
+$uberVan = new UberVann(10281,$driver,6,['silver',3],['semi piel']);
+$uberVan->printUberVann();
