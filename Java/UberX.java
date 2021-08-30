@@ -12,19 +12,23 @@ public class UberX extends Car{
 
     @Override
     public Integer getPassenger() {
-        // TODO Auto-generated method stub
         return super.getPassenger();
     }
 
     @Override
     public void setPassenger(Integer passenger) {
-        // TODO Auto-generated method stubs
         if (passenger == 4){
             super.setPassenger(passenger);
             }else{
                 System.out.println("el numero de pasajeros debe ser de 4");
             }
        
+    }
+
+    @Override
+    void printDataCar() {
+        System.out.println("Estas en un UberX");
+        super.printDataCar();
     }
     
     

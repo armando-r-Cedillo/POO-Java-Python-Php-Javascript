@@ -1,13 +1,15 @@
 from car import Car
 
 class UberX(Car):
-    brand = str
-    model = str
+    __brand = str
+    __model = str
 
-    def __init__(self, license, driver, brand, model):
-        super().__init__(license, driver)
-        self.brand = brand
-        self.model = model
+    def __init__(self, brand, model,id, driver ,license,passenger):
+        super().__init__(id, driver ,license,passenger)
+        self.__brand = brand
+        self.__model = model
 
-    def printdata(self):
-        print(self.brand + " " + self.model + " " + self.license, " " + str(self.driver.email))
+    def printdataCar(self):
+        print("Marca: " + self.__brand + " Modelo: " + self.__model)
+        return super().printDataCar()
+         

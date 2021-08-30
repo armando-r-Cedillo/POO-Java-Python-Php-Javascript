@@ -30,5 +30,23 @@ public class UberVan extends Car {
 
     }
 
+    @Override
+    void printDataCar() {
+        // TODO Auto-generated method stub
+        System.out.println("Estas en una UberVan");
+        this.SeatsMaterial.iterator().next();
+
+        for(int i=0; i < this.typeCarAccepted.size(); i++){
+            ArrayList<Object> a = new ArrayList<Object>(this.typeCarAccepted.keySet());
+            Object o=a.get(i);
+            System.out.println("all together: " + this.typeCarAccepted.size() + "each element is:  " + o + " value: " + this.typeCarAccepted.get(o));        }
+       
+        for (int i = 0; i < this.SeatsMaterial.size(); i++) {
+            System.out.println(this.SeatsMaterial.get(i).toString());
+        }
+        super.printDataCar();
+
+    }
+
     
 }

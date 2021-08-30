@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 public class Main{
         public static void main(String[] args) {
                System.out.println("Hello world"); 
@@ -39,6 +42,25 @@ public class Main{
                //UberX uberx = new UberX(license, driver, brand, model)
                uberNuevo.setPassenger(2);
                uberNuevo.printDataCar();
+
+               Map <String, Map <String,Integer>> typeCarAccepted;
+               Map <String,Integer> seconMap;
+               ArrayList <String> SeatsMaterial;
+               typeCarAccepted = new HashMap <String, Map <String,Integer>>();
+               seconMap = new HashMap <String,Integer>();
                
+               seconMap.put("BBVA",15);   
+               typeCarAccepted.put("VISA", seconMap);
+
+               SeatsMaterial = new ArrayList<>();
+               SeatsMaterial.add("Piel");
+               
+               UberVan uberCamioneta = new UberVan("afc213", 
+               new Account("Armando", "document-1d", "a@g.com", "azx"), 
+               3,
+               typeCarAccepted, 
+               SeatsMaterial);
+               
+               uberCamioneta.printDataCar();
         }
 }
